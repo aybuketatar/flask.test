@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lisans Sihirbazı</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; padding: 40px; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #333; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; background-color: #28a745; color: white; padding: 12px; border: none; margin-top: 20px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📝 Lisans Oluşturma Uygulaması</h2>
+        <form action="/olustur" method="POST">
+            <label>Eserin Adı:</label>
+            <input type="text" name="eser_adi">
+
+            <label>Yazar / Eser Sahibi:</label>
+            <input type="text" name="yazar_adi">
+
+            <label>Yayınlanma Yılı:</label>
+            <input type="number" name="yil">
+
+            <label>Eser URL'si (İsteğe Bağlı):</label>
+            <input type="text" name="url" placeholder="https://...">
+
+            <label>Lisans Türü Seçin:</label>
+            <select name="lisans_turu">
+                <option value="CC0">Kamu Malı (CC0)</option>
+                <option value="CC-BY">(CC BY)</option>
+                <option value="CC-BY-SA">(CC BY-SA)</option>
+                <option value="CC-BY-ND">(CC BY-ND)</option>
+                <option value="CC-BY-NC">(CC BY-NC)</option>
+            </select>
+
+            <button type="submit">Lisans Oluştur ✨</button>
+        </form>
+    </div>
+</body>
+</html>
